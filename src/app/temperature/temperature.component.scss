@@ -1,4 +1,9 @@
-:host {
-    height: 100%;
-    background-color: red;
+.temperature {
+    &--container {
+        background-color: orange;
+    }
+    &--text {
+        color: white;
+        font-size: 10rem;
+    }
 }
