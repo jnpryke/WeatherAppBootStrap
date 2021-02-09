@@ -9,6 +9,7 @@ import { TemperatureComponent } from './temperature/temperature.component';
 import { ForecastComponent } from './forecast/forecast.component';
 import { RadarComponent } from './radar/radar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { KelvinConversionPipe } from './pipes/kelvin-conversion.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     TopBarComponent,
     TemperatureComponent,
     ForecastComponent,
-    RadarComponent
+    RadarComponent,
+    KelvinConversionPipe
   ],
   imports: [
     BrowserModule,
