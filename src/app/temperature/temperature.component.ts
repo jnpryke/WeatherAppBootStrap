@@ -15,15 +15,17 @@ export class TemperatureComponent implements OnInit, OnDestroy {
   constructor(private dataService: DataService) { }
 
   public ngOnInit(): void {
-    this.dataService.getWeather()
-      .pipe(takeWhile((_) => this.isAlive))
-      .subscribe((res: IWeatherResponse) => {
-        this.temperature = res.main.temp;
-      });
   }
 
   public ngOnDestroy(): void {
     this.isAlive = false;
   }
 
+  public getTemperature() {
+    this.dataService.getWeather()
+      .pipe(takeWhile((_) => this.isAlive))
+      .subscribe((res: IWeatherResponse) => {
+        this.temperature = res.main.temp;
+      });
+  }
 }
